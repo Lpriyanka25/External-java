@@ -80,3 +80,33 @@ public class MouseEvents extends JFrame implements MouseListener, MouseMotionLis
         SwingUtilities.invokeLater(() -> new MouseEvents());
     }
 }
+  // MouseListener methods
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        mouseLabel.setText("Mouse Clicked at (" + e.getX() + ", " + e.getY() + ")");
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        mouseLabel.setText("Mouse Pressed at (" + e.getX() + ", " + e.getY() + ")");
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        mouseLabel.setText("Mouse Released at (" + e.getX() + ", " + e.getY() + ")");
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        mouseLabel.setText("Mouse Entered the window.");
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        mouseLabel.setText("Mouse Exited the window.");
+    }
+
+    public static void main(String[] args) {
+        new KeyMouseEventDemo();
+    }
+}
